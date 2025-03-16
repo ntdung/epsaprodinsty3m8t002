@@ -1,0 +1,4 @@
+fragment NumberBlockData on NumberBlock {
+  IntegerProperty
+  FloatProperty
+}

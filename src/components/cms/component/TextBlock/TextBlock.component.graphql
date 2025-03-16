@@ -1,0 +1,5 @@
+fragment TextBlockData on TextBlock {
+  ShortStringBlockProperty
+  LongStringBlockProperty
+  XHTMLStringBlockProperty { json, html }
+}

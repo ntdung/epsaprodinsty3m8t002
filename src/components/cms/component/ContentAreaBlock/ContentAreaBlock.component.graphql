@@ -1,0 +1,3 @@
+fragment ContentAreaBlockData on ContentAreaBlock {
+  ContentAreaBlockProperty { ...IContentListItem }
+}

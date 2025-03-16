@@ -1,0 +1,3 @@
+fragment ContentReferenceBlockData on ContentReferenceBlock {
+  ContentReferenceBlockProperty { ...ReferenceData }
+}

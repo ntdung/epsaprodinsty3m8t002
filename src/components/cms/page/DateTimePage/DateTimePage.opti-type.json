@@ -1,0 +1,24 @@
+{
+  "key": "DateTimePage",
+  "displayName": "DateTime Page",
+  "description": "",
+  "baseType": "page",
+  "sortOrder": 0,
+  "mayContainTypes": [
+    "*"
+  ],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "DateTimePageProperty": {
+      "type": "dateTime",
+      "displayName": "DateTime Page Property",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    }
+  }
+}

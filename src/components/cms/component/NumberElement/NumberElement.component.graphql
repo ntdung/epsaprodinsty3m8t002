@@ -1,0 +1,4 @@
+fragment NumberElementData on NumberElement {
+  IntegerProperty
+  FloatProperty
+}
