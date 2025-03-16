@@ -1,0 +1,60 @@
+{
+  "name": "optimizely-saas-starter",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "packageManager": "yarn@4.6.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && opti-graph webhook:create",
+    "build:full": "graphql-codegen && next build && opti-graph webhook:create",
+    "start": "next start",
+    "lint": "next lint",
+    "compile": "graphql-codegen",
+    "watch": "graphql-codegen -w",
+    "webhook:create": "opti-graph webhook:create",
+    "webhook:list": "opti-graph webhook:list"
+  },
+  "dependencies": {
+    "@remkoj/optimizely-cms-nextjs": "^4.3.1",
+    "@remkoj/optimizely-cms-react": "^4.3.1",
+    "@remkoj/optimizely-graph-client": "^4.3.1",
+    "dotenv": "^16.4.7",
+    "dotenv-expand": "^12.0.1",
+    "entities": "^6.0.0",
+    "graphql": "^16.10.0",
+    "graphql-request": "^6.1.0",
+    "graphql-tag": "^2.12.6",
+    "next": "14.2.24",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.5",
+    "@graphql-codegen/client-preset": "^4.6.4",
+    "@graphql-codegen/fragment-matcher": "^5.1.0",
+    "@graphql-codegen/plugin-helpers": "^5.1.0",
+    "@graphql-codegen/typescript": "^4.1.5",
+    "@graphql-codegen/typescript-operations": "^4.5.1",
+    "@graphql-typed-document-node/core": "^3.2.0",
+    "@remkoj/optimizely-cms-api": "^4.3.1",
+    "@remkoj/optimizely-cms-cli": "^4.3.1",
+    "@remkoj/optimizely-graph-cli": "^4.3.1",
+    "@remkoj/optimizely-graph-functions": "^4.3.1",
+    "@tailwindcss/postcss": "^4.0.9",
+    "@types/node": "^22.13.5",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@yarnpkg/sdks": "^3.2.0",
+    "chalk": "^5.4.1",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "14.2.24",
+    "figures": "^6.1.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.9",
+    "typescript": "^5.7.3"
+  },
+  "resolutions": {
+    "@graphql-codegen/visitor-plugin-common": "file:./packages/graphql-codegen-visitor-plugin-common-v5.7.1-patched.tgz"
+  }
+}
