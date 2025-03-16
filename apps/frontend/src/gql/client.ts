@@ -29,6 +29,24 @@ export const IContentDataFragmentDoc = gql`
   _type: __typename
 }
     `;
+export const PageDataFragmentDoc = gql`
+    fragment PageData on _IContent {
+  ...IContentData
+}
+    `;
+export const ReferenceDataFragmentDoc = gql`
+    fragment ReferenceData on ContentReference {
+  key
+  url {
+    ...LinkData
+  }
+}
+    `;
+export const IContentListItemFragmentDoc = gql`
+    fragment IContentListItem on _IContent {
+  ...IContentData
+}
+    `;
 export const BlockDataFragmentDoc = gql`
     fragment BlockData on _IComponent {
   ...IContentData
@@ -45,67 +63,6 @@ export const IElementDataFragmentDoc = gql`
 export const ElementDataFragmentDoc = gql`
     fragment ElementData on _IComponent {
   ...IElementData
-}
-    `;
-export const IContentListItemFragmentDoc = gql`
-    fragment IContentListItem on _IContent {
-  ...IContentData
-}
-    `;
-export const ContentAreaBlockDataFragmentDoc = gql`
-    fragment ContentAreaBlockData on ContentAreaBlock {
-  ContentAreaBlockProperty {
-    ...IContentListItem
-  }
-}
-    `;
-export const ContentAreaItemBlockDataFragmentDoc = gql`
-    fragment ContentAreaItemBlockData on ContentAreaItemBlock {
-  ContentAreaItemBlockProperty {
-    ...IContentListItem
-  }
-}
-    `;
-export const ReferenceDataFragmentDoc = gql`
-    fragment ReferenceData on ContentReference {
-  key
-  url {
-    ...LinkData
-  }
-}
-    `;
-export const ContentReferenceBlockDataFragmentDoc = gql`
-    fragment ContentReferenceBlockData on ContentReferenceBlock {
-  ContentReferenceBlockProperty {
-    ...ReferenceData
-  }
-}
-    `;
-export const DateTimeBlockDataFragmentDoc = gql`
-    fragment DateTimeBlockData on DateTimeBlock {
-  DateTimeProperty
-}
-    `;
-export const NumberBlockDataFragmentDoc = gql`
-    fragment NumberBlockData on NumberBlock {
-  IntegerProperty
-  FloatProperty
-}
-    `;
-export const NumberElementDataFragmentDoc = gql`
-    fragment NumberElementData on NumberElement {
-  IntegerProperty
-  FloatProperty
-}
-    `;
-export const TextBlockDataFragmentDoc = gql`
-    fragment TextBlockData on TextBlock {
-  ShortStringBlockProperty
-  LongStringBlockProperty
-  XHTMLStringBlockProperty {
-    json
-    html
-  }
 }
     `;
 export const CompositionDataFragmentDoc = gql`
@@ -128,13 +85,6 @@ export const CompositionDataFragmentDoc = gql`
     component {
       ...BlockData
       ...ElementData
-      ...ContentAreaBlockData
-      ...ContentAreaItemBlockData
-      ...ContentReferenceBlockData
-      ...DateTimeBlockData
-      ...NumberBlockData
-      ...NumberElementData
-      ...TextBlockData
     }
   }
 }
@@ -144,36 +94,6 @@ export const ExperienceDataFragmentDoc = gql`
   composition {
     ...CompositionData
   }
-}
-    `;
-export const BlankExperienceDataFragmentDoc = gql`
-    fragment BlankExperienceData on BlankExperience {
-  ...ExperienceData
-}
-    `;
-export const DateTimePageDataFragmentDoc = gql`
-    fragment DateTimePageData on DateTimePage {
-  DateTimePageProperty
-}
-    `;
-export const NumberBlockPropertyDataFragmentDoc = gql`
-    fragment NumberBlockPropertyData on NumberBlockProperty {
-  IntegerProperty
-  FloatProperty
-}
-    `;
-export const NumberPageDataFragmentDoc = gql`
-    fragment NumberPageData on NumberPage {
-  NumberBlockProperty {
-    ...NumberBlockPropertyData
-  }
-  IntegerProperty
-  FloatProperty
-}
-    `;
-export const PageDataFragmentDoc = gql`
-    fragment PageData on _IContent {
-  ...IContentData
 }
     `;
 export const getContentByIdDocument = gql`
@@ -186,16 +106,6 @@ export const getContentByIdDocument = gql`
     items {
       ...BlockData
       ...PageData
-      ...ContentAreaBlockData
-      ...ContentAreaItemBlockData
-      ...ContentReferenceBlockData
-      ...DateTimeBlockData
-      ...NumberBlockData
-      ...NumberElementData
-      ...TextBlockData
-      ...BlankExperienceData
-      ...DateTimePageData
-      ...NumberPageData
     }
   }
 }
@@ -203,24 +113,7 @@ export const getContentByIdDocument = gql`
 ${IContentDataFragmentDoc}
 ${IContentInfoFragmentDoc}
 ${LinkDataFragmentDoc}
-${PageDataFragmentDoc}
-${ContentAreaBlockDataFragmentDoc}
-${IContentListItemFragmentDoc}
-${ContentAreaItemBlockDataFragmentDoc}
-${ContentReferenceBlockDataFragmentDoc}
-${ReferenceDataFragmentDoc}
-${DateTimeBlockDataFragmentDoc}
-${NumberBlockDataFragmentDoc}
-${NumberElementDataFragmentDoc}
-${TextBlockDataFragmentDoc}
-${BlankExperienceDataFragmentDoc}
-${ExperienceDataFragmentDoc}
-${CompositionDataFragmentDoc}
-${ElementDataFragmentDoc}
-${IElementDataFragmentDoc}
-${DateTimePageDataFragmentDoc}
-${NumberPageDataFragmentDoc}
-${NumberBlockPropertyDataFragmentDoc}`;
+${PageDataFragmentDoc}`;
 export const getContentByPathDocument = gql`
     query getContentByPath($path: [String!]!, $locale: [Locales!], $siteId: String) {
   content: _Content(
@@ -231,34 +124,13 @@ export const getContentByPathDocument = gql`
     items {
       ...IContentData
       ...PageData
-      ...BlankExperienceData
-      ...DateTimePageData
-      ...NumberPageData
     }
   }
 }
     ${IContentDataFragmentDoc}
 ${IContentInfoFragmentDoc}
 ${LinkDataFragmentDoc}
-${PageDataFragmentDoc}
-${BlankExperienceDataFragmentDoc}
-${ExperienceDataFragmentDoc}
-${CompositionDataFragmentDoc}
-${BlockDataFragmentDoc}
-${ElementDataFragmentDoc}
-${IElementDataFragmentDoc}
-${ContentAreaBlockDataFragmentDoc}
-${IContentListItemFragmentDoc}
-${ContentAreaItemBlockDataFragmentDoc}
-${ContentReferenceBlockDataFragmentDoc}
-${ReferenceDataFragmentDoc}
-${DateTimeBlockDataFragmentDoc}
-${NumberBlockDataFragmentDoc}
-${NumberElementDataFragmentDoc}
-${TextBlockDataFragmentDoc}
-${DateTimePageDataFragmentDoc}
-${NumberPageDataFragmentDoc}
-${NumberBlockPropertyDataFragmentDoc}`;
+${PageDataFragmentDoc}`;
 export const getContentTypeDocument = gql`
     query getContentType($key: String!, $version: String, $locale: [Locales!], $path: String, $domain: String) {
   content: _Content(
