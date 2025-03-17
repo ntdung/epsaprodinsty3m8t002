@@ -1,5 +1,5 @@
 fragment ContentAreaItemBlockData on ContentAreaItemBlock {
   ContentAreaItemBlockProperty {
-    ...IContentListItem
+    ... IContentListItem
   }
 }
