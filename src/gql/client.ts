@@ -151,6 +151,20 @@ export const BlankExperienceDataFragmentDoc = gql`
   ...ExperienceData
 }
     `;
+export const ContentAreaPageDataFragmentDoc = gql`
+    fragment ContentAreaPageData on ContentAreaPage {
+  ContentAreaProp {
+    ...BlockData
+    ...ContentAreaBlockData
+    ...ContentAreaItemBlockData
+    ...ContentReferenceBlockData
+    ...DateTimeBlockData
+    ...NumberBlockData
+    ...NumberElementData
+    ...TextBlockData
+  }
+}
+    `;
 export const DateTimePageDataFragmentDoc = gql`
     fragment DateTimePageData on DateTimePage {
   DateTimePageProperty
@@ -194,6 +208,7 @@ export const getContentByIdDocument = gql`
       ...NumberElementData
       ...TextBlockData
       ...BlankExperienceData
+      ...ContentAreaPageData
       ...DateTimePageData
       ...NumberPageData
     }
@@ -218,6 +233,7 @@ ${ExperienceDataFragmentDoc}
 ${CompositionDataFragmentDoc}
 ${ElementDataFragmentDoc}
 ${IElementDataFragmentDoc}
+${ContentAreaPageDataFragmentDoc}
 ${DateTimePageDataFragmentDoc}
 ${NumberPageDataFragmentDoc}
 ${NumberBlockPropertyDataFragmentDoc}`;
@@ -232,6 +248,7 @@ export const getContentByPathDocument = gql`
       ...IContentData
       ...PageData
       ...BlankExperienceData
+      ...ContentAreaPageData
       ...DateTimePageData
       ...NumberPageData
     }
@@ -256,6 +273,7 @@ ${DateTimeBlockDataFragmentDoc}
 ${NumberBlockDataFragmentDoc}
 ${NumberElementDataFragmentDoc}
 ${TextBlockDataFragmentDoc}
+${ContentAreaPageDataFragmentDoc}
 ${DateTimePageDataFragmentDoc}
 ${NumberPageDataFragmentDoc}
 ${NumberBlockPropertyDataFragmentDoc}`;

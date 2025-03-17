@@ -1,0 +1,3 @@
+fragment ContentAreaPageData on ContentAreaPage {
+  ContentAreaProp { ...BlockData }
+}
