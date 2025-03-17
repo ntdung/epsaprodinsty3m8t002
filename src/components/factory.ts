@@ -1,23 +1,22 @@
 import 'server-only'
-import { getFactory as getBaseFactory, RichTextComponentDictionary } from "@remkoj/optimizely-cms-react/rsc";
+import { type ComponentFactory, DefaultComponentFactory, RichTextComponentDictionary } from '@remkoj/optimizely-cms-react/rsc'
 import { cache } from 'react'
-
-// Import all server components that should be loaded dynamically when the 
-// content requires them
-import components from './cms';
+import cmsComponents from './cms'
 
 /**
- * Get a configured instance of the component factory, which handles the
- * resolution of the ContentType within the Optimizely CMS to a React
- * component that will render it.
+ * Get the cached version of the Component Factory to use, this ensure that the
+ * minimum number of instances of the factory will be created.
  */
-export const getFactory = cache(() => {
-    const factory = getBaseFactory()
-    // Register the default components (for rendering Rich Text)
+export const getFactory = cache<() => ComponentFactory>(() => 
+{
+    const factory = new DefaultComponentFactory()
+
+    // Add support for Rich Text
     factory.registerAll(RichTextComponentDictionary)
 
-    // Register the CMS Components
-    factory.registerAll(components)
+    // Add support for Frontend defined components
+    factory.registerAll(cmsComponents)
+
     return factory
 })
 
