@@ -1,5 +1,0 @@
-fragment NumberPageData on NumberPage {
-  NumberBlockProperty { ...NumberBlockPropertyData }
-  IntegerProperty
-  FloatProperty
-}

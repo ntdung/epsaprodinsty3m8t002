@@ -1,3 +1,0 @@
-fragment DateTimeBlockData on DateTimeBlock {
-  DateTimeProperty
-}

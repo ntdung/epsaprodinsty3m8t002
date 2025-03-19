@@ -1,4 +1,0 @@
-fragment NumberBlockPropertyData on NumberBlockProperty {
-  IntegerProperty
-  FloatProperty
-}

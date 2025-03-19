@@ -1,3 +1,0 @@
-fragment DateTimePageData on DateTimePage {
-  DateTimePageProperty
-}
