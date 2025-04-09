@@ -10,13 +10,13 @@ import { getSdk } from "@/gql"
 export const ContentAreaItemPagePage : CmsComponent<ContentAreaItemPageDataFragment> = ({ data: { ContentAreaItemProp } }) => {
     const componentName = 'Content Area Item Page'
     const componentInfo = ''
-    return 
+    return (
         <div className="mx-auto px-2 container">
             <CmsEditable cmsFieldName="ContentAreaItemProp" as="pre" className="w-full overflow-x-hidden font-mono text-sm bg-slate-200 p-2 rounded-sm border border-solid border-slate-900 text-slate-900">
-                           abc123 {JSON.stringify(ContentAreaItemProp, undefined, 4)}    
-                        </CmsEditable> 
-            <p>Something went wrong</p>
+                           {JSON.stringify(ContentAreaItemProp, undefined, 4)}    
+                        </CmsEditable>
         </div>
+    )
 }
 ContentAreaItemPagePage.displayName = "Content Area Item Page (Page/ContentAreaItemPage)"
 ContentAreaItemPagePage.getDataFragment = () => ['ContentAreaItemPageData', ContentAreaItemPageDataFragmentDoc]
