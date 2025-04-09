@@ -1,0 +1,26 @@
+{
+  "key": "SimpleBlock",
+  "displayName": "Simple Block [Test]",
+  "description": "",
+  "baseType": "component",
+  "sortOrder": 0,
+  "mayContainTypes": [],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [
+    "sectionEnabled",
+    "elementEnabled"
+  ],
+  "properties": {
+    "StringProp": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "String Prop",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    }
+  }
+}

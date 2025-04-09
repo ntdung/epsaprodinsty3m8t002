@@ -1,0 +1,3 @@
+fragment SimplePageData on SimplePage {
+  StringProp
+}

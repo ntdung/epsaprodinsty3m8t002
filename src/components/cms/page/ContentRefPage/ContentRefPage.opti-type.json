@@ -1,0 +1,26 @@
+{
+  "key": "ContentRefPage",
+  "displayName": "Content Ref Page",
+  "description": "",
+  "baseType": "page",
+  "sortOrder": 0,
+  "mayContainTypes": [
+    "*"
+  ],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "ContentRefPageProp": {
+      "type": "contentReference",
+      "displayName": "Content Ref Page Prop",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {},
+      "allowedTypes": [],
+      "restrictedTypes": []
+    }
+  }
+}

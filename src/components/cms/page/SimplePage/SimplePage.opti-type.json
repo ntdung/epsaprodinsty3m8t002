@@ -1,0 +1,25 @@
+{
+  "key": "SimplePage",
+  "displayName": "Simple Page [Test]",
+  "description": "",
+  "baseType": "page",
+  "sortOrder": 0,
+  "mayContainTypes": [
+    "*"
+  ],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "StringProp": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "String Prop",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    }
+  }
+}

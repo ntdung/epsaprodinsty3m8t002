@@ -1,0 +1,4 @@
+fragment SimpleExpData on SimpleExp {
+  StringProp
+  ...ExperienceData
+}

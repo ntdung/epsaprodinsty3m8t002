@@ -1,0 +1,3 @@
+fragment StringBlockPropertyData on StringBlockProperty {
+  ShortStringProp
+}

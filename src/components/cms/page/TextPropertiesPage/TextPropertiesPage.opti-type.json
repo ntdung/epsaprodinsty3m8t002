@@ -1,0 +1,36 @@
+{
+  "key": "TextPropertiesPage",
+  "displayName": "Text Properties Page",
+  "description": "Text Properties Page",
+  "baseType": "page",
+  "sortOrder": 0,
+  "mayContainTypes": [
+    "*"
+  ],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "StringProp": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "String Prop",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    },
+    "XhtmlProp": {
+      "type": "string",
+      "format": "html",
+      "displayName": "Xhtml Prop",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    }
+  }
+}

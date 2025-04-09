@@ -1,0 +1,3 @@
+fragment LinksPageData on LinksPage {
+  LinkColltionProp { ...LinkItemData }
+}

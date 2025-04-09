@@ -3,6 +3,10 @@ import getFactory from '@/components/factory'
 import { getAuthorizedServerClient } from '@remkoj/optimizely-cms-nextjs'
 import { getContentById } from "@/gql/functions";
 
+// Import components & factory
+import { setupFactory } from "@components/factory";
+import RefreshNotice from "@components/refresh-notice";
+
 const Page = OnPageEdit.createEditPageComponent(getFactory(), {
     // Casting is needed due to the locale being an enum in the generated types and a string in the generic query used by the loader
     loader: getContentById,

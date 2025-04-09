@@ -1,0 +1,3 @@
+fragment SimpleBlockData on SimpleBlock {
+  StringProp
+}

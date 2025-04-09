@@ -1,0 +1,24 @@
+{
+  "key": "ContentRefBlock",
+  "displayName": "Content Ref Block",
+  "description": "",
+  "baseType": "component",
+  "sortOrder": 0,
+  "mayContainTypes": [],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "ContentRefProp": {
+      "type": "contentReference",
+      "displayName": "Content Ref Prop",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {},
+      "allowedTypes": [],
+      "restrictedTypes": []
+    }
+  }
+}

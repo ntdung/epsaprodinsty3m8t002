@@ -1,0 +1,23 @@
+{
+  "key": "StringBlock",
+  "displayName": "String Block",
+  "description": "",
+  "baseType": "component",
+  "sortOrder": 0,
+  "mayContainTypes": [],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "ShortStringProp": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Short String Prop",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    }
+  }
+}

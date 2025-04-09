@@ -1,0 +1,4 @@
+fragment TextPropertiesPageData on TextPropertiesPage {
+  StringProp
+  XhtmlProp { json, html }
+}

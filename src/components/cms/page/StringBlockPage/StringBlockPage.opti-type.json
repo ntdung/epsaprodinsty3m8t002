@@ -1,0 +1,25 @@
+{
+  "key": "StringBlockPage",
+  "displayName": "StringBlock Page",
+  "description": "",
+  "baseType": "page",
+  "sortOrder": 0,
+  "mayContainTypes": [
+    "*"
+  ],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "StringBlockProp": {
+      "type": "component",
+      "contentType": "StringBlock",
+      "displayName": "StringBlock Prop",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    }
+  }
+}

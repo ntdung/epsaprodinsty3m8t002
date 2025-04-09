@@ -7,7 +7,7 @@ import cmsComponents from './cms'
  * Get the cached version of the Component Factory to use, this ensure that the
  * minimum number of instances of the factory will be created.
  */
-export const getFactory = cache<() => ComponentFactory>(() => 
+export const setupFactory = cache<() => ComponentFactory>(() => 
 {
     const factory = new DefaultComponentFactory()
 
@@ -20,4 +20,4 @@ export const getFactory = cache<() => ComponentFactory>(() =>
     return factory
 })
 
-export default getFactory
+export default setupFactory

@@ -1,0 +1,37 @@
+{
+  "key": "NumberBlock",
+  "displayName": "Number Block",
+  "description": "Block contains integer and float properties",
+  "baseType": "component",
+  "sortOrder": 0,
+  "mayContainTypes": [
+    "*"
+  ],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [
+    "sectionEnabled",
+    "elementEnabled"
+  ],
+  "properties": {
+    "IntegerProp": {
+      "type": "integer",
+      "displayName": "Integer Prop",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    },
+    "FloatProp": {
+      "type": "float",
+      "displayName": "Float Prop",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    }
+  }
+}
